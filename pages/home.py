@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
-lottie_file = load_lottiefile("https://github.com/MasMahardi/streamlit_todo_list_PBL/blob/main/file/animation_1.json")
+lottie_file = load_lottiefile("./file/animation_1.json")
 
 # intro page
 st.title("MY :blue[_COOL TO DO LIST APP_] :sunglasses:")
