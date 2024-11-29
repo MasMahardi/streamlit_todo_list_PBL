@@ -14,7 +14,6 @@ pages ={
     "To Do List Activity":[
         st.Page(create_page, title="Create, Read, and Delete Feature")
     ]
-
 }
 
 if __name__ == "__main__":
