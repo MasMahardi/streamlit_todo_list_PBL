@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_lottie
 from pathlib import Path
 
 # PATH Setting
