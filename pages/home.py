@@ -10,7 +10,7 @@ def load_lottiefile(filepath: str):
 lottie_file = load_lottiefile("https://github.com/MasMahardi/streamlit_todo_list_PBL/blob/main/file/animation_1.json")
 
 # intro page
-st.title("MY :blue[_TO DO LIST APP_] :sunglasses:")
+st.title("MY :blue[_COOL TO DO LIST APP_] :sunglasses:")
 name = st.text_input("Please input your name here",)
 
 if name != "":
