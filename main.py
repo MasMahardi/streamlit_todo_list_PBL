@@ -5,7 +5,6 @@ from pathlib import Path
 current_dir = Path(__file__).parent if "_file_" in locals() else Path.cwd()
 home_page = current_dir/"pages"/"home.py"
 create_page = current_dir/"pages"/"crud.py"
-test_page = current_dir/"pages"/"logic_test.py"
 
 # page setup
 pages ={
@@ -13,11 +12,11 @@ pages ={
         st.Page(home_page, title="Home"),
     ],
     "To Do List Activity":[
-        st.Page(create_page, title="Create Read Update Delete Feature")
+        st.Page(create_page, title="Create, Read, and Delete Feature")
     ]
 
 }
 
-
-pg = st.navigation(pages)
-pg.run()
+if __name__ == "__main__":
+    pg = st.navigation(pages)
+    pg.run()

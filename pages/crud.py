@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+# create text input both to do list and days
 col1, col2 = st.columns(2, gap="small")
 with col1:
     activity_1 = st.text_input("Put your to do list 1")
@@ -18,13 +19,14 @@ with col2:
 table_1 = pd.DataFrame(columns=['To Do'])
 table_2 = pd.DataFrame(columns=['Day'])
 
+# create dataframe to be loaded after input to do list and days
 for i in activity:
     table_1.loc[len(table_1)] = [i]
-
 for y in day:
     table_2.loc[len(table_2)] = [y]
 table = pd.concat([table_1,table_2], axis = 1)
 
+# storing information after input todolist for CRUD purposes
 st.write("#")
 if "table" not in st.session_state:
     st.session_state.table = table
@@ -33,11 +35,12 @@ elif "st.session_state.table_2" not in st.session_state:
 elif "st.session_state.table_3" not in st.session_state:
     st.session_state.table_3 = st.session_state.table_2
 
+# create action button for CRUD purposes
 left,right = st.columns(2)
 if left.button("Create To Do List", use_container_width=True):
     left.markdown("You add all To Do List.")
     st.dataframe(table, use_container_width=True)
-if right.button("Reset", icon=":material/mood:", use_container_width=True):
+if right.button("Reset", use_container_width=True):
     right.markdown("You reset all To Do List.")
     table = pd.DataFrame(columns=table.columns)
     st.dataframe(table, use_container_width=True)
