@@ -4,7 +4,7 @@ from PIL import Image
 
 st.title("About Me")
 
-image = Image.open("./file/profpic.JPEG")
+image = Image.open("./file/profpic.jpeg")
 st.image(image, width= 400)
 
 st.subheader("*Mahardi Setyoso Pratomo*")
