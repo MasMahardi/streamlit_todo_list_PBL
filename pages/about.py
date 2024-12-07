@@ -1,13 +1,10 @@
-from pathlib import Path
+
 import streamlit as st
 from PIL import Image
 
 st.title("About Me")
 
-current_dir = Path(__file__).parent if "_file_" in locals() else Path.cwd()
-profile_pic = current_dir / "file" / "profpic.jpeg"
-
-image = Image.open(profile_pic)
+image = Image.open("./file/profpic.JPEG")
 st.image(image, width= 400)
 
 st.subheader("*Mahardi Setyoso Pratomo*")
