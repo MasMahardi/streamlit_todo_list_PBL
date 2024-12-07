@@ -4,7 +4,7 @@ from PIL import Image
 
 st.title("About Me")
 
-image = Image.open("./file/profpic.jpeg")
+image = Image.open("https://github.com/MasMahardi/streamlit_todo_list_PBL/blob/main/file/profpic.JPEG")
 st.image(image, width= 400)
 
 st.subheader("*Mahardi Setyoso Pratomo*")
