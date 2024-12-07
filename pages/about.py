@@ -4,8 +4,8 @@ from PIL import Image
 
 st.title("About Me")
 
-#image = Image.open("./file/profpic.JPEG")
-#st.image(image, width= 400)
+image = Image.open("./file/profpic.JPEG")
+st.image(image, width= 400)
 
 st.subheader("*Mahardi Setyoso Pratomo*")
 st.write("Linkedin [link](https://www.linkedin.com/in/mahardi-setyoso-pratomo-5ab97432/)")
