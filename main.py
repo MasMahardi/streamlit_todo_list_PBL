@@ -2,18 +2,21 @@ import streamlit as st
 import streamlit_lottie
 from pathlib import Path
 
+from streamlit import title
+
 # PATH Setting
 current_dir = Path(__file__).parent if "_file_" in locals() else Path.cwd()
 home_page = current_dir/"pages"/"home.py"
-create_page = current_dir/"pages"/"crud.py"
+about_me = current_dir/"pages"/"about.py"
+
 
 # page setup
 pages ={
-    "Home":[
+    "To Do List Activity":[
         st.Page(home_page, title="Home"),
     ],
-    "To Do List Activity":[
-        st.Page(create_page, title="Create, Read, and Delete Feature")
+    "About me":[
+        st.Page(about_me, title="About me")
     ]
 }
 
